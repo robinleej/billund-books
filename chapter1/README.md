@@ -36,7 +36,7 @@ React >= 15.0.0 后， 不支持 IE8 及其以下版本。之前的版本能够�
 
         $ mkdir my-project && cd my-project
 
-        $ yo gfe-billund
+        $ yo billund
 
 - 运行项目
 
