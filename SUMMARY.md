@@ -6,4 +6,5 @@
     * [项目结构](chapter2/project-config.md)
     * [组件](chapter2/widget.md)
     * [页面配置](chapter2/page.md)
+    * [webpack-loader](chapter2/loader.md)
 
