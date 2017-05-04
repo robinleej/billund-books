@@ -40,6 +40,14 @@ app - 应用的根目录
 │── ...
 ```
 
+## app.js
+
+是对应的node端启动脚本，里面有将`billund`作为`koa`的中间件的启动代码。
+
+## devserver.js
+
+是对应的开发时node端启动脚本，会自动热部署组件。里面有将`billund`作为`koa`的中间件的启动代码。
+
 ## supportorpreprocessor.js
 
 需要一再声明的是，我们的billund项目是一个同构项目，大部分的代码都能够同时运行在两端。在`nodejs`端执行组件的[dataGenerator](todo)时，`this`会指向[koa](http://koa.bootcss.com/)的上下文。熟悉`koa`的小伙伴会知道，koa允许在上下文上挂载中间件。那么，因为我们的`dataGenerator`也有可能运行在前端，那么就需要也提供一个能力在前端能够挂载对应的同构中间件。supportorpreprocessor暴露出来一个`GeneratorFunction`，参数的对应的上下文，我们可以在对应的上下文中挂载我们想要挂载的参数。
