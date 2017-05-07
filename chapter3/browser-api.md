@@ -146,3 +146,21 @@
 - names
 
 	需要展示的`widget`的`name`数组。
+
+## React Api
+
+如果你的页面是由`React`渲染而成，那么我们会使用[Redux](https://github.com/reactjs/redux)来进行`widget`和页面之间的状态管理，建议先对`Redux`有所了解。
+
+### Billund.decorateReducer
+
+向全局`store`注册`reducer`。这个`api`是由`billund`提供的，与`Redux`提供的[replaceReducer](https://github.com/reactjs/redux/blob/master/docs/api/Store.md#replaceReducer)不同，注册新的`reducer`并不会覆盖之前的`reducer`，而是形成一条`reducer`调用链，顺序是从 `New Reducer` -> 'Old Reducer'以此进行处理。
+
+#### 参数选项
+
+- reducer
+
+	`Redux`原生的[Reducer](https://github.com/reactjs/redux/blob/master/docs/basics/Reducers.md)
+
+### Billund.dispatch
+
+等同于`Redux`的[dispatch](https://github.com/reactjs/redux/blob/master/docs/api/Store.md#dispatch)，发出一个[action](https://github.com/reactjs/redux/blob/master/docs/basics/Actions.md)来唤起`Reducer`处理的流程
