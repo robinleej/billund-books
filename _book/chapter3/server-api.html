@@ -1,0 +1,422 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>服务端 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="browser-api.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/project-config.html">
+            
+                <a href="../chapter2/project-config.html">
+            
+                    
+                    项目结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/widget.html">
+            
+                <a href="../chapter2/widget.html">
+            
+                    
+                    组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/page.html">
+            
+                <a href="../chapter2/page.html">
+            
+                    
+                    页面配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/loader.html">
+            
+                <a href="../chapter2/loader.html">
+            
+                    
+                    webpack-loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    API文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="server-api.html">
+            
+                <a href="server-api.html">
+            
+                    
+                    服务端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="browser-api.html">
+            
+                <a href="browser-api.html">
+            
+                    
+                    浏览器端
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >服务端</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x670D;&#x52A1;&#x7AEF;">&#x670D;&#x52A1;&#x7AEF;</h1>
+<p><code>billund</code>&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x65F6;&#xFF0C;&#x5145;&#x5F53;&#x662F;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x7684;&#x804C;&#x8D23;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x7EC4;&#x4EF6;&#x3002;&#x5BF9;&#x5E94;&#x7684;<code>api</code>&#x4E5F;&#x4F1A;&#x4E0E;&#x6B64;&#x7D27;&#x5BC6;&#x76F8;&#x5173;&#x3002;</p>
+<h2 id="billundinit">Billund.init</h2>
+<pre><code>const koa = require(&apos;koa&apos;);
+const Billund = require(&apos;billund&apos;);
+
+const app = koa();
+
+co(function*() {
+    app.use(Billund.init({ ...options }));
+</code></pre><p><code>Billund.init</code>&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>GeneratorFunction</code>&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#x51FD;&#x6570;&#xFF0C;&#x4ECE;&#x800C;<code>koa</code>&#x53EF;&#x4EE5;&#x5C06;<code>billund</code>&#x6CE8;&#x518C;&#x6210;&#x81EA;&#x8EAB;&#x7684;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x4EF6;&#x3002;</p>
+<h3 id="billundinit-&#x53C2;&#x6570;&#x9009;&#x9879;">Billund.init &#x53C2;&#x6570;&#x9009;&#x9879;</h3>
+<ul>
+<li><p>actionDir</p>
+<p>  &#x5FC5;&#x586B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;<code>billund</code>&#x7684;<code>controler</code>&#x6240;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;<code>billund</code>&#x4F1A;&#x7ED3;&#x5408;&#x53C2;&#x6570;<code>actionNameRegex</code>&#x904D;&#x5386;<code>actionDir</code>&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x540D;&#x5339;&#x914D;<code>actionNameRegex</code>&#x4F5C;&#x4E3A;<code>billund</code>&#x7684;<code>controler</code>&#x6587;&#x4EF6;&#x6CE8;&#x518C;&#x3002;</p>
+</li>
+<li><p>actionNameRegex</p>
+<p>  &#x5FC5;&#x586B;&#xFF0C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4E0E;&#x53C2;&#x6570;<code>actionDir</code>&#x642D;&#x914D;&#x4F7F;&#x7528;&#xFF0C;&#x904D;&#x5386;<code>actionDir</code>&#x4E0B;&#x9762;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x540D;&#x5339;&#x914D;<code>actionNameRegex</code>&#x4F5C;&#x4E3A;<code>billund</code>&#x7684;<code>controler</code>&#x6587;&#x4EF6;&#x6CE8;&#x518C;&#x3002;</p>
+<pre><code>  Billund.init({
+      actionDir: path.resolve(__dirname, &apos;./action&apos;),
+      actionNameRegex: new RegExp(&apos;.(action).(js)$&apos;),
+      ...
+  });
+</code></pre></li>
+<li><p>widgetDir</p>
+<p>  &#x5FC5;&#x586B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;<code>server</code>&#x7AEF;&#x7684;<code>widget</code>(&#x901A;&#x8FC7;webpack&#x6253;&#x5305;&#x540E;)&#x6240;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;<code>billund</code>&#x4F1A;&#x7ED3;&#x5408;&#x53C2;&#x6570;<code>widgetNameRegex</code>&#xFF0C;&#x904D;&#x5386;<code>widgetDir</code>&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x540D;&#x5339;&#x914D;<code>widgetDir</code>&#x4F5C;&#x4E3A;<code>billund</code>&#x7684;server&#x7AEF;&#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#x3002;</p>
+</li>
+<li><p>widgetNameRegex</p>
+<p>  &#x5FC5;&#x586B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4E0E;&#x53C2;&#x6570;<code>widgetNameRegex</code>&#x642D;&#x914D;&#x4F7F;&#x7528;&#xFF0C;&#x904D;&#x5386;<code>widgetDir</code>&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x6587;&#x4EF6;&#x540D;&#x5339;&#x914D;<code>widgetDir</code>&#x4F5C;&#x4E3A;<code>billund</code>&#x7684;server&#x7AEF;&#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#x3002;</p>
+<pre><code>  Billund.init({
+      ...
+      widgetDir: path.resolve(__dirname, &apos;./serverdist&apos;),
+      widgetNameRegex: /\.(js)$/,
+      ...
+  });
+</code></pre></li>
+<li><p>vendors</p>
+<p>  &#x5FC5;&#x586B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;<code>Object</code>&#x3002;<code>billund</code>&#x540C;&#x65F6;&#x652F;&#x6301;&apos;React&apos;&#x4E0E;&apos;Vue&apos;&#x7684;&#x6E32;&#x67D3;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x6839;&#x636E;&#x9875;&#x9762;&#x7684;&#x7EC4;&#x6210;&#x5F15;&#x5165;&#x4E0D;&#x540C;&#x7684;<code>lib</code>&#x5E93;&#x3002;&#x90A3;&#x4E48;&#xFF0C;<code>vendors</code>&#x5B57;&#x6BB5;&#x5C31;&#x662F;&#x7528;&#x6765;&#x63D0;&#x4F9B;&#x5BF9;&#x5E94;&#x7684;lib&#x5E93;&#x3002;<code>vendors</code>&#x5B57;&#x6BB5;&#x652F;&#x6301;&#x4E24;&#x4E2A;key,&#x5206;&#x522B;&#x662F;<code>react</code>&#x4E0E;<code>vue</code>&#xFF0C;&#x5185;&#x5BB9;&#x4E0E;<a href="../chapter2/page.html">staticResource</a>&#x7684;&#x683C;&#x5F0F;&#x76F8;&#x540C;&#x3002;
+  &#x8303;&#x4F8B;&#xFF1A;</p>
+<pre><code>  Billund.init({
+      ...
+      vendors: {
+          react: &apos;billund-example/react.js&apos;,
+          vue: &apos;billund-example/vue.js&apos;
+      },
+      ...
+  });
+</code></pre></li>
+<li><p>renderPlugins</p>
+<p>  &#x9009;&#x586B;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;<code>Object</code>&#xFF0C;&#x5206;&#x522B;&#x662F;<code>header</code>&#x548C;<code>body</code>&#xFF0C;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E86;<code>renderPlugin</code>&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x7684;&#x5185;&#x5BB9;&#x6240;&#x63D2;&#x5165;&#x7684;&#x4F4D;&#x7F6E;&#x3002;
+  <a href="">renderPlugin&#x7684;&#x8BE6;&#x7EC6;&#x6982;&#x5FF5;</a>&#x3002;</p>
+</li>
+</ul>
+<h2 id="billundupdatewidgets">Billund.updateWidgets</h2>
+<pre><code>webpackServerCompiler.watch({}, (err, stats) =&gt; {
+    ....
+    // &#x63D0;&#x793A;Billund&#x5220;&#x9664;&#x81EA;&#x5DF1;cache&#x7684;&#x5185;&#x5BB9;
+    Billund.updateWidgets();
+});
+</code></pre><p>&#x66F4;&#x65B0;<code>&#x670D;&#x52A1;&#x7AEF;</code>&#x7684;<code>widget</code>&#x5185;&#x5BB9;&#xFF0C;&#x4E00;&#x822C;&#x4E0E;<code>webpack</code>&#x7684;watch&#x529F;&#x80FD;&#x642D;&#x914D;&#x4F7F;&#x7528;&#x3002;&#x5F53;&#x53D1;&#x73B0;<code>widget</code>&#x6E90;&#x4EE3;&#x7801;&#x53D1;&#x751F;&#x53D8;&#x66F4;&#xFF0C;&#x5373;&#x53EF;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x66F4;&#x65B0;<code>&#x670D;&#x52A1;&#x7AEF;</code>&#x7684;<code>widget</code>&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: API文档">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="browser-api.html" class="navigation navigation-next " aria-label="Next page: 浏览器端">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"服务端","level":"1.4.1","depth":2,"next":{"title":"浏览器端","level":"1.4.2","depth":2,"path":"chapter3/browser-api.md","ref":"chapter3/browser-api.md","articles":[]},"previous":{"title":"API文档","level":"1.4","depth":1,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[{"title":"服务端","level":"1.4.1","depth":2,"path":"chapter3/server-api.md","ref":"chapter3/server-api.md","articles":[]},{"title":"浏览器端","level":"1.4.2","depth":2,"path":"chapter3/browser-api.md","ref":"chapter3/browser-api.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/server-api.md","mtime":"2017-05-07T05:57:55.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-07T05:16:45.037Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
