@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [前言](README.md)
 * [安装](chapter1/README.md)
 * [介绍](chapter2/README.md)
     * [项目结构](chapter2/project-config.md)
@@ -10,4 +10,6 @@
 * [API文档](chapter3/README.md)
     * [服务端](chapter3/server-api.md)
     * [浏览器端](chapter3/browser-api.md)
+* [高级配置](chapter4/README.md)
+    * [renderPlugin](chapter4/renderplugin.md)
 

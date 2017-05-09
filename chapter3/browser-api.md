@@ -164,3 +164,17 @@
 ### Billund.dispatch
 
 等同于`Redux`的[dispatch](https://github.com/reactjs/redux/blob/master/docs/api/Store.md#dispatch)，发出一个[action](https://github.com/reactjs/redux/blob/master/docs/basics/Actions.md)来唤起`Reducer`处理的流程
+
+## Vue Api
+
+如果你的页面是由`Vue`渲染而成，那么我们会使用[Vuex](https://vuex.vuejs.org/zh-cn/)来进行`widget`和页面之间的状态管理，建议先对`Vuex`有所了解。
+
+### Billund.hotUpdate
+
+向全局`store`注册`Vuex`的相关配置，例如`actions`、`mutations`、`getters`，从而可以响应各类数据变更行为。参考`vuex`中的[hotUpdate](https://vuex.vuejs.org/zh-cn/api.html)，但是最好不要直接更新`state`。
+
+#### 参数选项
+
+- config
+
+	Object,可以支持`actinos`、'mutations'、'getters'字段。
