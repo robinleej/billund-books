@@ -22,7 +22,7 @@ legoConfig - billund的配置
 │   │── requireParams: [String][optional] - 传递给组件的校验规则，默认是!undifined，还可以增加!null!''!0等校验，没有通过校验规则的组件会降级回到前端
 │   │── index: [String][optional] - 排序规则 应该为'group.sub'形式，例如'001.001'，相同group的组件分为一组，同属于一个大容器，然后按照sub进行排序
 │
-│── options - [Object][optional] - 组件的自定义配置，允许自定义拓展(详见后续的[renderPlugins]())，基础字段如下:
+│── options - [Object][optional] - 组件的自定义配置，允许自定义拓展(详见后续的[renderPlugins](/chapter4/renderplugin.html))，基础字段如下:
 │   │── staticResources: [Array][required] - 组件引用的页面级静态资源，对应组件的代码也会自动合入这些资源
 │   	 │── entry: [String][required] - 对应的js文件
 │   	 │── styles: [String][optional] - 对应的css文件
@@ -77,10 +77,10 @@ module.exports = {
 
 ### 降级组件
 
-通常来说，h5页面会需要投放多种环境，如native hybird，浏览器等。那么，有些参数在某些环境可能在Node端无法获取，需要依赖前端环境才可以获取。这个时候，我们可以配置requireParams校验规则，不符合规则的组件将会被降级回浏览器，等待参数充足的时候自动继续执行。我们可以通过[setSharedParams]()方法来设置参数，`billund`会自动校验参数是否已经满足。
+通常来说，h5页面会需要投放多种环境，如native hybird，浏览器等。那么，有些参数在某些环境可能在Node端无法获取，需要依赖前端环境才可以获取。这个时候，我们可以配置requireParams校验规则，不符合规则的组件将会被降级回浏览器，等待参数充足的时候自动继续执行。我们可以通过[setSharedParams](/chapter3/browser-api.html#billundsetsharedparams)方法来设置参数，`billund`会自动校验参数是否已经满足。
 
 ### 静态资源
 
-我们会将静态资源通过`staticResources`字段进行引入。`staticResources`是一个数组，其中每个元素的entry字段代表静态js，styles字段代表静态css，具体的路径应该是${你的项目名}/${相对地址}即可引用到对应的资源。我们会要求每一个页面需要引入一个页面级的静态资源，方便我们在打包时注入一些内容。一般来说，你需要自己实现一个[renderPlugin]()，来进行staticResource -> 真实静态资源地址的映射转换。
+我们会将静态资源通过`staticResources`字段进行引入。`staticResources`是一个数组，其中每个元素的entry字段代表静态js，styles字段代表静态css，具体的路径应该是${你的项目名}/${相对地址}即可引用到对应的资源。我们会要求每一个页面需要引入一个页面级的静态资源，方便我们在打包时注入一些内容。一般来说，你需要自己实现一个[renderPlugin](/chapter4/renderplugin.html)，来进行staticResource -> 真实静态资源地址的映射转换。
 
 

@@ -10,10 +10,10 @@ billund定位是一个模块化框架，组件无疑就是一个重要的组成�
 
 ### actions
 
-暴露出去的action常量，让代码能优雅，例如：
+暴露出去的action常量，让代码能更优雅，例如：
 
 ```
-action.js
+ - action.js
 
 const BTN_CLICKED = 'billund-widget-test-widget/btn-clicked';
 
@@ -22,7 +22,7 @@ module.exports = {
 };
 
 
-config.js
+ - config.js
 module.exports = {
 	name: 'billund-widget-test-widget',
 	actions: require('./action.js')	
@@ -35,7 +35,7 @@ module.exports = {
 
 ## dataGenerator
 
-dataGenerator的定义是组件的初始化数据逻辑，是一个`es6`的`GeneratorFunction`，有可能会同时运行在nodejs端和browser端。方法接收一个从`controler`传入的`object`参数，同时this指向对应的上下文(nodejs端是指向[koa](http://koa.bootcss.com/)的上下文，browser端是指向[billund-supportor](todo)的上下文)。方法要求返回一个`object`结果，这个`object`会是传入模板的props，同时也是store的组件state，从而后续可以通过`redux`|'vuex'进行操作。一个常见的`dataGenerator`如下:
+dataGenerator的定义是组件的初始化数据逻辑，是一个`es6`的`GeneratorFunction`，有可能会同时运行在nodejs端和browser端。方法接收一个从`controler`传入的`object`参数，同时this指向对应的上下文(nodejs端是指向[koa](http://koa.bootcss.com/)的上下文，browser端是指向[前置处理器](/chapter2/project-config.html?q=#supportorpreprocessorjs)的上下文)。方法要求返回一个`object`结果，这个`object`会是传入模板的props，同时也是store的组件state，从而后续可以通过`redux`|`vuex`进行操作。一个常见的`dataGenerator`如下:
 
 ```
 'use strict';
@@ -79,9 +79,9 @@ function* execute(params) {
 module.exports = execute;
 ```
 
-在执行过程中，如果发生了错误，可以直接排除异常，`billund`会捕获这个异常，并且体现在[renderPlugin](todo)的执行结果中。同时，如果这个组件是一个[首屏模块]()，会自动在前端进行重试。
+在执行过程中，如果发生了错误，可以直接排除异常，`billund`会捕获这个异常，并且体现在[renderPlugin](/chapter4/renderplugin.html)的执行结果中。同时，如果这个组件是一个[首屏模块](/chapter2/page.html#首屏组件)，会自动在前端进行重试。
 
-ps: 如果没有提供`dataGenerator`，我们会默认将`controler`传递的[params]()直接传递给模板。
+ps: 如果没有提供`dataGenerator`，我们会默认将`controler`传递的[params](/chapter2/page.html#action)直接传递给模板。
 
 ## template
 
@@ -122,3 +122,7 @@ mutations是一个对象，里面包含了组件注册需要响应`mutation`。`
 #### getters
 
 getters是一个对象，里面包含了组件要注册的`getter`。`getter`同时接收三个参数，分别是`state`(组件的局部状态),`getters`(所有的getters),`rootState`(全局的state)。
+
+#### state -> props
+
+默认情况下，我们会将`template`中的`props`直接与组件对应`module`中对应的state对应，state变更会直接自动引起props的变更，不需要开发者手动关联。

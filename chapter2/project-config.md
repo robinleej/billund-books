@@ -33,7 +33,7 @@ app - 应用的根目录
 │   │── widgetA
 │   │── widgetB
 │   └── ...
-│── widget - 组件
+│── webpack - webpack配置相关文件夹
 │── app.js node应用启动脚本
 │── devserver.js node应用启动脚本(开发时使用，有组件热更新能力)
 │── supportorpreprocessor.js - 静态资源的上下文注册脚本
@@ -50,7 +50,7 @@ app - 应用的根目录
 
 ## supportorpreprocessor.js
 
-需要一再声明的是，我们的billund项目是一个同构项目，大部分的代码都能够同时运行在两端。在`nodejs`端执行组件的[dataGenerator](todo)时，`this`会指向[koa](http://koa.bootcss.com/)的上下文。熟悉`koa`的小伙伴会知道，koa允许在上下文上挂载中间件。那么，因为我们的`dataGenerator`也有可能运行在前端，那么就需要也提供一个能力在前端能够挂载对应的同构中间件。supportorpreprocessor暴露出来一个`GeneratorFunction`，参数的对应的上下文，我们可以在对应的上下文中挂载我们想要挂载的参数。
+需要一再声明的是，我们的billund项目是一个同构项目，大部分的代码都能够同时运行在两端。在`nodejs`端执行组件的[dataGenerator](/chapter2/widget.html#datagenerator)时，`this`会指向[koa](http://koa.bootcss.com/)的上下文。熟悉`koa`的小伙伴会知道，koa允许在上下文上挂载中间件。那么，因为我们的`dataGenerator`也有可能运行在前端，那么就需要也提供一个能力在前端能够挂载对应的同构中间件。supportorpreprocessor暴露出来一个`GeneratorFunction`，方法参数是对应的上下文，我们可以在对应的上下文中挂载我们想要挂载的参数。
 
 ## package.json
 
@@ -84,7 +84,7 @@ app - 应用的根目录
 
 - supportorpreprocessor
 
-	[前端预置处理器](todo)的位置
+	前端预置处理器的位置
 
 - vuechunkname
 

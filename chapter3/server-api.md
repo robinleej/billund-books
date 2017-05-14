@@ -68,7 +68,7 @@ co(function*() {
 - renderPlugins
 
 	选填，是一个`Object`，分别是`header`和`body`，分别对应了`renderPlugin`渲染出来的内容所插入的位置。
-	[renderPlugin的详细概念]()。
+	[renderPlugin的详细概念](/chapter4/renderplugin.html)。
 
 ## Billund.updateWidgets
 
