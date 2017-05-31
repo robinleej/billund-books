@@ -12,7 +12,7 @@
 
 ### 静态打包
 
-在静态打包模式下，组件只会暴露出一些静态资源，如`name`(WIDGET_NAME)，`actions`，`constants`等字段。区分这两种打包模式的原因是，让非异步加载的包尽量小，优化性能。
+在静态打包模式下，组件只会暴露出一些静态资源，如`name`(`WIDGET_NAME`)，`actions`，`constants`等字段。区分这两种打包模式的原因是，让非异步加载的包尽量小，优化性能。
 
 ## billund-action-loader
 

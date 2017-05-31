@@ -14,7 +14,7 @@
 
 Vue.js 不支持 IE8 及其以下版本，因为 Vue.js 使用了 IE8 不能模拟的 ECMAScript 5 特性。 Vue.js 支持所有兼容 [ECMAScript 5](http://caniuse.com/#feat=es5) 的浏览器。
 
-React >= 15.0.0 后， 不支持 IE8 及其以下版本。之前的版本能够兼容IE8.
+React >= 15.0.0 后， 不支持 IE8 及其以下版本。之前的版本能够兼容IE8。
 
 ## 更新日志
 

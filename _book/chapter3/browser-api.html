@@ -315,7 +315,7 @@
 <p>&#x57FA;&#x672C;api&#x662F;&#x65E0;&#x8BBA;&#x4EFB;&#x4F55;&#x6E32;&#x67D3;&#x6846;&#x67B6;&#xFF0C;<code>billund</code>&#x90FD;&#x4F1A;&#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
 <h3 id="billundgetstate">Billund.getState</h3>
 <p>&#x83B7;&#x53D6;&#x6574;&#x4E2A;&#x9875;&#x9762;&#x7EA7;&#x7684;<code>state</code>&#x3002;<code>state</code>&#x7684;&#x6765;&#x6E90;&#x591A;&#x79CD;&#x591A;&#x6837;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x6765;&#x81EA;&#x4E8E;<a href="../chapter2/page.html">storeData</a>&#xFF0C;&#x6216;&#x8005;&#x662F;&#x901A;&#x8FC7;&#x4E0E;<code>widget</code>&#x7684;&#x4EA4;&#x4E92;&#x5F97;&#x5230;&#x7684;&#x6570;&#x636E;&#x3002;</p>
-<h3 id="billundregistonstartlistener">Billund.registOnStartListener</h3>
+<h3 id="billundregisteronstartlistener">Billund.registerOnStartListener</h3>
 <p>&#x6CE8;&#x518C;<code>widget</code>&#x7684;&#x542F;&#x52A8;&#x56DE;&#x8C03;&#xFF0C;&#x5F53;<code>widget</code>&#x540C;&#x6784;&#x6210;&#x529F;(React -&gt; componentDidMount,Vue -&gt; mounted)&#x65F6;&#xFF0C;&#x4F1A;&#x56DE;&#x8C03;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x7EC4;&#x4EF6;&#x5DF2;&#x7ECF;&#x540C;&#x6784;&#x8FC7;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;&#x9009;&#x9879;">&#x53C2;&#x6570;&#x9009;&#x9879;</h4>
 <ul>
@@ -326,7 +326,7 @@
 <p>  Function,&#x540C;&#x6784;&#x6210;&#x529F;&#x65F6;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x53C2;&#x6570;<code>props</code>&#xFF0C;&#x4EE3;&#x8868;&#x7EC4;&#x4EF6;&#x7684;&#x5F53;&#x524D;&#x6570;&#x636E;&#x3002;</p>
 </li>
 </ul>
-<h3 id="billundregistonfaillistener">Billund.registOnFailListener</h3>
+<h3 id="billundregisteronfaillistener">Billund.registerOnFailListener</h3>
 <p>&#x6CE8;&#x518C;<code>widget</code>&#x7684;&#x5931;&#x8D25;&#x56DE;&#x8C03;&#x3002;&#x5F53;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x540E;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x5185;&#xFF0C;<code>widget</code>&#x8FD8;&#x6CA1;&#x6709;&#x540C;&#x6784;&#x6210;&#x529F;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684;&#x56DE;&#x8C03;&#x3002;&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x540C;&#x6784;&#x6210;&#x529F;&#x7684;<code>widget</code>&#xFF0C;&#x4EC0;&#x4E48;&#x4E5F;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;&#x9009;&#x9879;">&#x53C2;&#x6570;&#x9009;&#x9879;</h4>
 <ul>
@@ -337,10 +337,10 @@
 <p>  Function,&#x540C;&#x6784;&#x5931;&#x8D25;&#x65F6;&#x7684;&#x56DE;&#x8C03;&#x65B9;&#x6CD5;&#x3002;</p>
 </li>
 <li><p>options</p>
-<p>  Object&#xFF0C;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x3002;&#x91CC;&#x9762;&#x652F;&#x6301;timeout&#x5B57;&#x6BB5;&#xFF0C;&#x5373;&#x8BBE;&#x5B9A;&#x4ECE;<code>registOnFailListener</code>&#x5F00;&#x59CB;&#x5230;&#x8BA4;&#x5B9A;<code>widget</code>&#x540C;&#x6784;&#x5931;&#x8D25;&#x7684;&#x65F6;&#x95F4;&#x957F;&#x5EA6;&#x3002;&#x9ED8;&#x8BA4;&#x662F;2000ms&#x3002;</p>
+<p>  Object&#xFF0C;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x3002;&#x91CC;&#x9762;&#x652F;&#x6301;timeout&#x5B57;&#x6BB5;&#xFF0C;&#x5373;&#x8BBE;&#x5B9A;&#x4ECE;<code>registerOnFailListener</code>&#x5F00;&#x59CB;&#x5230;&#x8BA4;&#x5B9A;<code>widget</code>&#x540C;&#x6784;&#x5931;&#x8D25;&#x7684;&#x65F6;&#x95F4;&#x957F;&#x5EA6;&#x3002;&#x9ED8;&#x8BA4;&#x662F;2000ms&#x3002;</p>
 </li>
 </ul>
-<h3 id="billundregistonchangelistener">Billund.registOnChangeListener</h3>
+<h3 id="billundregisteronchangelistener">Billund.registerOnChangeListener</h3>
 <p>&#x6CE8;&#x518C;<code>widget</code>&#x7684;&#x6570;&#x636E;&#x53D8;&#x66F4;&#x56DE;&#x8C03;&#xFF0C;&#x5F53;<code>widget</code>&#x5BF9;&#x5E94;&#x7684;<code>state</code>&#x53D1;&#x751F;&#x53D8;&#x66F4;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;&#x9009;&#x9879;">&#x53C2;&#x6570;&#x9009;&#x9879;</h4>
 <ul>
@@ -426,7 +426,7 @@
 <h2 id="react-api">React Api</h2>
 <p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x9875;&#x9762;&#x662F;&#x7531;<code>React</code>&#x6E32;&#x67D3;&#x800C;&#x6210;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x4F1A;&#x4F7F;&#x7528;<a href="https://github.com/reactjs/redux" target="_blank">Redux</a>&#x6765;&#x8FDB;&#x884C;<code>widget</code>&#x548C;&#x9875;&#x9762;&#x4E4B;&#x95F4;&#x7684;&#x72B6;&#x6001;&#x7BA1;&#x7406;&#xFF0C;&#x5EFA;&#x8BAE;&#x5148;&#x5BF9;<code>Redux</code>&#x6709;&#x6240;&#x4E86;&#x89E3;&#x3002;</p>
 <h3 id="billunddecoratereducer">Billund.decorateReducer</h3>
-<p>&#x5411;&#x5168;&#x5C40;<code>store</code>&#x6CE8;&#x518C;<code>reducer</code>&#x3002;&#x8FD9;&#x4E2A;<code>api</code>&#x662F;&#x7531;<code>billund</code>&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x4E0E;<code>Redux</code>&#x63D0;&#x4F9B;&#x7684;<a href="https://github.com/reactjs/redux/blob/master/docs/api/Store.md#replaceReducer" target="_blank">replaceReducer</a>&#x4E0D;&#x540C;&#xFF0C;&#x6CE8;&#x518C;&#x65B0;&#x7684;<code>reducer</code>&#x5E76;&#x4E0D;&#x4F1A;&#x8986;&#x76D6;&#x4E4B;&#x524D;&#x7684;<code>reducer</code>&#xFF0C;&#x800C;&#x662F;&#x5F62;&#x6210;&#x4E00;&#x6761;<code>reducer</code>&#x8C03;&#x7528;&#x94FE;&#xFF0C;&#x987A;&#x5E8F;&#x662F;&#x4ECE; <code>New Reducer</code> -&gt; &apos;Old Reducer&apos;&#x4EE5;&#x6B64;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x5411;&#x5168;&#x5C40;<code>store</code>&#x6CE8;&#x518C;<code>reducer</code>&#x3002;&#x8FD9;&#x4E2A;<code>api</code>&#x662F;&#x7531;<code>billund</code>&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x4E0E;<code>Redux</code>&#x63D0;&#x4F9B;&#x7684;<a href="https://github.com/reactjs/redux/blob/master/docs/api/Store.md#replaceReducer" target="_blank">replaceReducer</a>&#x4E0D;&#x540C;&#xFF0C;&#x6CE8;&#x518C;&#x65B0;&#x7684;<code>reducer</code>&#x5E76;&#x4E0D;&#x4F1A;&#x8986;&#x76D6;&#x4E4B;&#x524D;&#x7684;<code>reducer</code>&#xFF0C;&#x800C;&#x662F;&#x5F62;&#x6210;&#x4E00;&#x6761;<code>reducer</code>&#x8C03;&#x7528;&#x94FE;&#xFF0C;&#x987A;&#x5E8F;&#x662F;&#x4ECE; <code>New Reducer</code> -&gt; <code>Old Reducer</code>&#x4EE5;&#x6B64;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
 <h4 id="&#x53C2;&#x6570;&#x9009;&#x9879;">&#x53C2;&#x6570;&#x9009;&#x9879;</h4>
 <ul>
 <li><p>reducer</p>
@@ -488,7 +488,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"浏览器端","level":"1.4.2","depth":2,"next":{"title":"高级配置","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"renderPlugin","level":"1.5.1","depth":2,"path":"chapter4/renderplugin.md","ref":"chapter4/renderplugin.md","articles":[]}]},"previous":{"title":"服务端","level":"1.4.1","depth":2,"path":"chapter3/server-api.md","ref":"chapter3/server-api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/browser-api.md","mtime":"2017-05-08T07:52:04.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-14T07:07:16.486Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"浏览器端","level":"1.4.2","depth":2,"next":{"title":"高级配置","level":"1.5","depth":1,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[{"title":"renderPlugin","level":"1.5.1","depth":2,"path":"chapter4/renderplugin.md","ref":"chapter4/renderplugin.md","articles":[]}]},"previous":{"title":"服务端","level":"1.4.1","depth":2,"path":"chapter3/server-api.md","ref":"chapter3/server-api.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter3/browser-api.md","mtime":"2017-05-28T05:36:07.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-30T09:33:26.185Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

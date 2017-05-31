@@ -1,6 +1,6 @@
 # 组件
 
-billund定位是一个模块化框架，组件无疑就是一个重要的组成部分。在billund的组件概念，组件是由数据生成逻辑(`dataGenerator`)、模板(`react`|'vue')、store配置(`redux`|'vuex')组成，是一个可以完整自运行的自洽组件。
+billund定位是一个模块化框架，组件无疑就是一个重要的组成部分。在billund的组件概念，组件是由数据生成逻辑(`dataGenerator`)、模板(`react`|`vue`)、store配置(`redux`|`vuex`)组成，是一个可以完整自运行的自洽组件。
 
 组件通过一个配置文件将这些内容关联起来，配置文件可以理解为就是组件的入口。配置文件要求暴露出来一个对象，其中字段如下：
 
@@ -79,7 +79,7 @@ function* execute(params) {
 module.exports = execute;
 ```
 
-在执行过程中，如果发生了错误，可以直接排除异常，`billund`会捕获这个异常，并且体现在[renderPlugin](/chapter4/renderplugin.html)的执行结果中。同时，如果这个组件是一个[首屏模块](/chapter2/page.html#首屏组件)，会自动在前端进行重试。
+在执行过程中，如果发生了错误，可以直接抛出异常，`billund`会捕获这个异常，并且体现在[renderPlugin](/chapter4/renderplugin.html)的执行结果中。同时，如果这个组件是一个[首屏模块](/chapter2/page.html#首屏组件)，会自动在前端进行重试。
 
 ps: 如果没有提供`dataGenerator`，我们会默认将`controler`传递的[params](/chapter2/page.html#action)直接传递给模板。
 
@@ -125,4 +125,4 @@ getters是一个对象，里面包含了组件要注册的`getter`。`getter`同
 
 #### state -> props
 
-默认情况下，我们会将`template`中的`props`直接与组件对应`module`中对应的state对应，state变更会直接自动引起props的变更，不需要开发者手动关联。
+默认情况下，我们会将`template`中组件的`props`直接与组件对应`module`中对应的`state`对应，state变更会直接自动引起props的变更，不需要开发者手动关联。

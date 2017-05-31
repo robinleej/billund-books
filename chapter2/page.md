@@ -75,6 +75,8 @@ module.exports = {
 
 对于用户来说，首屏的出现时间和体验密切相关。那么，对于`billund`，就是通过weight这个权重字段来确认一个页面有哪些组件是首屏组件。一个业务上的组件，权重最高的一组(没有写weight的视为0)将被认为是首屏组件。首屏组件将在node端进行渲染出html返回给浏览器，而非首屏组件将在浏览器端进行渲染。同时，在打包上我们也根据首屏组件进行了优化，非首屏组件的js将通过异步引入的方式加载进来。从而使需要加载的初始js变小。在[extract-text-webpack-plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/455)修复了这个对应bug后，我们还能让首屏css变得更小，让首屏更快。
 
+对于首屏组件来说，如果在服务端渲染失败，将会尝试在浏览器端重试渲染。
+
 ### 降级组件
 
 通常来说，h5页面会需要投放多种环境，如native hybird，浏览器等。那么，有些参数在某些环境可能在Node端无法获取，需要依赖前端环境才可以获取。这个时候，我们可以配置requireParams校验规则，不符合规则的组件将会被降级回浏览器，等待参数充足的时候自动继续执行。我们可以通过[setSharedParams](/chapter3/browser-api.html#billundsetsharedparams)方法来设置参数，`billund`会自动校验参数是否已经满足。

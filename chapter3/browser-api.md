@@ -12,7 +12,7 @@
 
 获取整个页面级的`state`。`state`的来源多种多样，可能是来自于[storeData](/chapter2/page.html)，或者是通过与`widget`的交互得到的数据。
 
-### Billund.registOnStartListener
+### Billund.registerOnStartListener
 
 注册`widget`的启动回调，当`widget`同构成功(React -> componentDidMount,Vue -> mounted)时，会回调这个方法。如果组件已经同构过，那么会直接调用这个方法。
 
@@ -26,7 +26,7 @@
 
 	Function,同构成功时的回调，接收一个参数`props`，代表组件的当前数据。
 
-### Billund.registOnFailListener
+### Billund.registerOnFailListener
 
 注册`widget`的失败回调。当调用方法后一段时间内，`widget`还没有同构成功，就会调用对应的回调。对于已经同构成功的`widget`，什么也不会发生。
 
@@ -42,9 +42,9 @@
 
 - options
 
-	Object，可选参数。里面支持timeout字段，即设定从`registOnFailListener`开始到认定`widget`同构失败的时间长度。默认是2000ms。
+	Object，可选参数。里面支持timeout字段，即设定从`registerOnFailListener`开始到认定`widget`同构失败的时间长度。默认是2000ms。
 
-### Billund.registOnChangeListener
+### Billund.registerOnChangeListener
 
 注册`widget`的数据变更回调，当`widget`对应的`state`发生变更，就会调用这个回调。
 
@@ -153,7 +153,7 @@
 
 ### Billund.decorateReducer
 
-向全局`store`注册`reducer`。这个`api`是由`billund`提供的，与`Redux`提供的[replaceReducer](https://github.com/reactjs/redux/blob/master/docs/api/Store.md#replaceReducer)不同，注册新的`reducer`并不会覆盖之前的`reducer`，而是形成一条`reducer`调用链，顺序是从 `New Reducer` -> 'Old Reducer'以此进行处理。
+向全局`store`注册`reducer`。这个`api`是由`billund`提供的，与`Redux`提供的[replaceReducer](https://github.com/reactjs/redux/blob/master/docs/api/Store.md#replaceReducer)不同，注册新的`reducer`并不会覆盖之前的`reducer`，而是形成一条`reducer`调用链，顺序是从 `New Reducer` -> `Old Reducer`以此进行处理。
 
 #### 参数选项
 
