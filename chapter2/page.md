@@ -17,6 +17,7 @@ legoConfig - billund的配置
 │── storeConfig - [Object][optional] - 整个页面共享的Store的一些配置，可以在这里注册一些Vuex的getters
 │── widgets - [Array][required] - 组件列表，每个元素字段如下:
 │   │── name: [String][required] - 组件的名称
+│   │── paths: [Array][required] - 如果页面上存在有router配置，paths决定当前组件在哪些路径下展示
 │   │── params: [Object][optional] - 传递给组件的参数，就是dataGenerator接到的参数
 │   │── weight: [Number][optional] - 组件的权重，权重最高的一组组件称为高权重组件
 │   │── requireParams: [String][optional] - 传递给组件的校验规则，默认是!undifined，还可以增加!null!''!0等校验，没有通过校验规则的组件会降级回到前端
@@ -28,6 +29,7 @@ legoConfig - billund的配置
 │   	 │── styles: [String][optional] - 对应的css文件
 │   │── pageTitle: [String][optional] - 页面的标题
 │   │── backAutoRefresh: [Boolean][optional] - 检测到location的回退时自动刷新，主要用来解决app缓存html的问题，默认为false
+│   │── routerConfig: [Object][optional] - 对vue-router与react-router的配置支持，vue-router已经完整支持，react-router支持中
 │   
 │── ...
 ```
@@ -84,5 +86,17 @@ module.exports = {
 ### 静态资源
 
 我们会将静态资源通过`staticResources`字段进行引入。`staticResources`是一个数组，其中每个元素的entry字段代表静态js，styles字段代表静态css，具体的路径应该是${你的项目名}/${相对地址}即可引用到对应的资源。我们会要求每一个页面需要引入一个页面级的静态资源，方便我们在打包时注入一些内容。一般来说，你需要自己实现一个[renderPlugin](/chapter4/renderplugin.html)，来进行staticResource -> 真实静态资源地址的映射转换。
+
+### 路由配置
+
+很多情况下，我们还需要对单页面进行实现。`vue`与`react`都有对应的全家桶解决方案，例如[vue-router](https://router.vuejs.org/zh-cn/)与[react-router](https://react-guide.github.io/react-router-cn/)。
+
+#### react-router
+
+开发中
+
+#### vue-router
+
+如果你的页面上由vue组件组成，那么你就可以使用vue-router进行单页模式的开发。首先，[legoConfig](/chapter2/page.html#action)可以配置`routerConfig`配置`vue-router`的构造配置（需要注意的是，这一部分的代码是同构的，请不要写一些与环境相关的方法，并且尽量不要引用。）。同时，不需要去写`component`或者`components`信息，每个路径上有哪些组件是通过在`widgets`的元素中设置paths字段，来声明当前的组件是属于哪些单页面。
 
 
