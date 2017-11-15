@@ -27,6 +27,10 @@
 
 解析页面组件里的`storeConfig`配置，然后将其进行同构注册，从而让两端都拥有对应的能力(如`vuex`的`getters`等，就很推荐注册在这里)。
 
+- routerConfig的同构注册
+
+解析页面组件里的`routerConfig`配置，然后将其进行同构注册，从而让两端都拥有对应的能力(如`vue-module`)。
+
 `billund-action-loader`支持两个参数：
 
 - widgetNameToPath

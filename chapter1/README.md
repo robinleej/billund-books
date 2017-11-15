@@ -48,4 +48,8 @@ React >= 15.0.0 后， 不支持 IE8 及其以下版本。之前的版本能够�
 
 - 打开 [react-demo页](localhost:8080/simple-react.html)
 
-- 打开 [vue-demo页](localhost:8080/simple-vue.html)      
+- 打开 [vue-demo页](localhost:8080/simple-vue.html)  
+
+## 开发支持
+
+### [Controler](/chapter2/project-config.html)层修改代码自动Reload    
